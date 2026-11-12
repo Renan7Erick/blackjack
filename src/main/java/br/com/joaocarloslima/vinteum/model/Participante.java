@@ -9,28 +9,30 @@ public abstract class Participante {
     public abstract boolean querCarta();
 
     public void receberCarta(Carta carta) {
+        this.mao.adicionar(carta);
     }
 
     public void parar() {
+        this.parou = true;
     }
 
     public boolean parou() {
-        return false;
+        return this.parou;
     }
 
     public int getPontos() {
-        return 0;
+        return this.mao.getPontos();
     }
 
     public boolean estourou() {
-        return false;
+        return this.mao.estourou();
     }
 
     public List<Carta> getCartas() {
-        return null;
+        return this.mao.getCartas();
     }
 
     protected Mao getMao() {
-        return null;
+        return this.mao;
     }
 }
