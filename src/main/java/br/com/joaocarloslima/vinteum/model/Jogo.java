@@ -43,19 +43,19 @@ public class Jogo {
 
     public String resultado() {
         if (!acabou()) {
-            return "Em andamento...";
+            return "";
         }
 
         if (this.jogador.estourou()) {
-            return "Você estourou! A Mesa ganhou.";
+            return "Você perdeu";
         } else if (this.mesa.estourou()) {
-            return "A Mesa estourou! Você ganhou!";
+            return "Você ganhou";
         } else if (this.jogador.getPontos() > this.mesa.getPontos()) {
-            return "Você ganhou!";
+            return "Você ganhou";
         } else if (this.jogador.getPontos() < this.mesa.getPontos()) {
-            return "A Mesa ganhou.";
+            return "Você perdeu";
         } else {
-            return "Empate!";
+            return "Empate";
         }
     }
 
