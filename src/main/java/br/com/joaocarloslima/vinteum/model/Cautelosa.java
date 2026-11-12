@@ -3,11 +3,11 @@ package br.com.joaocarloslima.vinteum.model;
 public class Cautelosa implements EstiloDeJogo {
     @Override
     public String getNome() {
-        return null;
+        return "Cautelosa";
     }
 
     @Override
     public boolean querCarta(Mao mao) {
-        return false;
+        return mao.getPontos() < 15;
     }
 }

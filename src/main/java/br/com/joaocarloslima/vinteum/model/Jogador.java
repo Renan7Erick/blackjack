@@ -4,6 +4,6 @@ public class Jogador extends Participante {
 
     @Override
     public boolean querCarta() {
-        return false;
+        return !parou() && !estourou();
     }
 }
